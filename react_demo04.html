@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo04</title>
+  <script src="./CommonJs/react.js"></script>
+  <script src="./CommonJs/react-dom.js"></script>
+  <script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.js"></script>
+</head>
+<body>
+  <div id="reactContainer"></div>
+  <script type="text/babel">
+    let arr = [
+      <h1 key='1'>hello wikiHong</h1>,
+      <h2 key='2'>hello ivanJiao</h2>,
+      <h3 key='3'>hello mrFang</h3>
+    ]
+    ReactDOM.render(<div>{arr}</div>, document.getElementById('reactContainer'))
+  </script>
+</body>
+</html>
