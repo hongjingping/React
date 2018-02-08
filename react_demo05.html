@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>demo05</title>
+  <script src="./CommonJs/react.js"></script>
+  <script src="./CommonJs/react-dom.js"></script>
+  <script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.js"></script>
+</head>
+<body>
+  <div id="reactContainer"></div>
+  <script type="text/babel">
+    var textBoxComponent = React.createClass({
+      getInitialState: function () {
+        return {enable: false};
+      },
+      handleClick: function (event) {
+        this.setState({emable: !this.state.enable});
+      },
+      render: function () {
+        return (
+          <p>
+            <input type="text" disabled={this.state.enable}/>
+            <button onClick={this.handleClick}>改变text的状态</button>
+          </p>
+        )
+      }
+    })
+    ReactDOM.render(<textBoxComponent/>, document.getElementById("reactContainer"))
+  </script>
+</body>
+</html>
