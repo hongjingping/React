@@ -13,8 +13,11 @@
   <div id="reactContainer"></div>
   <script type="text/babel">
   var Hello = React.createClass({
-    propTypes: {
-      title: React.PropTypes.string.isRequired
+    // propTypes: {
+    //   title: React.PropTypes.string.isRequired
+    // },
+    getDefaultProps: function () {
+      return { title: 'hello wikiHong'}
     },
     render: function () {
       return (
@@ -24,7 +27,7 @@
   });
   var data = '123';
   ReactDOM.render(
-    <Hello title={data}></Hello>, 
+    <Hello></Hello>, 
     document.getElementById('reactContainer'));
   </script>
 </body>
