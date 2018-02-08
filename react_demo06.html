@@ -13,8 +13,8 @@
   <div id="reactContainer"></div>
   <script type="text/babel">
     let HelloBox = React.createClass({
-      render: function () {
-        return(<div>{ 'hello' + this.props.myattr }</div>);
+      render: function(){
+        return (<div>{ 'hello' + this.props.myattr }</div>);
       }
     });
     ReactDOM.render(<HelloBox myattr="wikiHong"/>, document.getElementById('reactContainer'));
